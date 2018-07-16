@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+        xmlns:adroid="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        adroid:id="@+id/drawer_layout"
+        adroid:layout_width="match_parent"
+        adroid:layout_height="match_parent">
+
+    <ImageView
+        adroid:layout_width="wrap_content"
+        adroid:layout_height="wrap_content" />
+
+        <FrameLayout
+            adroid:layout_width="match_parent"
+            adroid:layout_height="46dp"
+            >
+            <android.support.v7.widget.Toolbar
+                adroid:id="@+id/toolbar"
+                app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                adroid:layout_width="match_parent"
+                adroid:layout_height="46dp"
+                adroid:background="@drawable/border_bottom">
+
+                <LinearLayout
+                    adroid:layout_width="wrap_content"
+                    adroid:layout_height="match_parent"
+                    adroid:gravity="start">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    adroid:id="@+id/headicon_main"
+                    adroid:layout_width="35dp"
+                    adroid:layout_height="35dp"
+                    adroid:src="@drawable/pic_head"
+                    adroid:layout_gravity="center"
+                    />
+                </LinearLayout>
+
+
+
+                <TextView
+                    adroid:id="@+id/title_toolbar"
+                    adroid:layout_width="wrap_content"
+                    adroid:layout_height="wrap_content"
+                    adroid:layout_gravity="center"
+                    adroid:textColor="@color/black"
+                    adroid:textSize="20sp"
+                    />
+            </android.support.v7.widget.Toolbar>
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            adroid:layout_width="match_parent"
+            adroid:layout_height="match_parent"
+            adroid:layout_marginTop="56dp"
+
+            >
+.
+            <com.getbase.floatingactionbutton.FloatingActionsMenu
+                adroid:id="@+id/action_menu"
+                adroid:layout_width="wrap_content"
+                adroid:layout_height="wrap_content"
+                adroid:layout_alignParentBottom="true"
+                adroid:layout_alignParentRight="true"
+                adroid:layout_alignParentEnd="true"
+                fab:fab_addButtonColorNormal="@color/white"
+                fab:fab_addButtonColorPressed="@null"
+                fab:fab_addButtonPlusIconColor="@color/black"
+                fab:fab_labelStyle="@style/menu_labels_style"
+
+                adroid:layout_marginBottom="16dp"
+                adroid:layout_marginRight="16dp"
+                adroid:layout_marginEnd="16dp">
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    adroid:id="@+id/action_note"
+                    adroid:layout_width="wrap_content"
+                    adroid:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_title="新备忘录"
+                    fab:fab_size="mini"
+                    adroid:src="@drawable/pic_addnote"
+                    fab:fab_colorPressed="@color/blue"/>
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    adroid:id="@+id/action_quick"
+                    adroid:layout_width="wrap_content"
+                    adroid:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_title="快速创建"
+                    fab:fab_size="mini"
+                    adroid:src="@drawable/pic_addquick"
+                    fab:fab_colorPressed="@color/blue"/>
+
+            </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+            <LinearLayout
+                adroid:layout_width="match_parent"
+                adroid:layout_height="match_parent"
+                adroid:layout_centerInParent="true"
+                adroid:orientation="vertical">
+
+                <include layout="@layout/empty_view"/>
+
+
+
+            </LinearLayout>
+            <com.example.notes.View.MainScrollview
+                adroid:id="@+id/main_scrollView"
+                adroid:layout_width="match_parent"
+                adroid:layout_height="wrap_content"
+                adroid:background="@drawable/border_bottom_null">
+
+                <com.example.notes.View.SwipeListView
+
+                    adroid:id="@+id/list_view"
+                    adroid:layout_width="match_parent"
+                    adroid:layout_height="match_parent"
+                    adroid:divider="#FFF5EE"
+                    adroid:dividerHeight="3dp"
+                    adroid:background="@null"
+                    />
+            </com.example.notes.View.MainScrollview>
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            adroid:id="@+id/navigation"
+            adroid:layout_width="280dp"
+            adroid:layout_height="match_parent"
+            adroid:layout_gravity="start"
+            app:menu="@menu/menu_nav"
+            app:headerLayout="@null"
+
+            />
+</android.support.v4.widget.DrawerLayout>

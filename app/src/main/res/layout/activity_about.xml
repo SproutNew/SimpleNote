@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:adroid="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    adroid:layout_width="match_parent"
+    adroid:layout_height="match_parent"
+    >
+
+
+    <android.support.v7.widget.Toolbar
+        adroid:id="@+id/toolbar"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        adroid:layout_width="match_parent"
+        adroid:layout_height="46dp"
+        adroid:background="@drawable/border_bottom">
+
+        <TextView
+
+            adroid:layout_width="wrap_content"
+            adroid:layout_height="wrap_content"
+            adroid:layout_gravity="center"
+            adroid:textColor="@color/black"
+            adroid:text="@string/about"
+            adroid:textSize="20sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <TextView
+        adroid:id="@+id/icon_about"
+        adroid:layout_marginTop="126dp"
+        adroid:layout_width="wrap_content"
+        adroid:layout_height="wrap_content"
+        adroid:text="@string/app_name"
+        adroid:layout_centerInParent="true"
+        adroid:layout_alignParentTop="true"
+        adroid:textColor="@color/black"
+        adroid:textSize="30sp"
+        />
+
+
+    <TextView
+        adroid:id="@+id/main_about"
+        adroid:layout_marginTop="1dp"
+        adroid:layout_width="wrap_content"
+        adroid:layout_height="wrap_content"
+        adroid:text="@string/app_version"
+        adroid:textSize="13sp"
+        adroid:layout_below="@+id/icon_about"
+        adroid:layout_centerHorizontal="true"
+        />
+
+
+    <LinearLayout
+        adroid:layout_below="@+id/main_about"
+        adroid:layout_centerHorizontal="true"
+        adroid:layout_alignParentBottom="true"
+        adroid:orientation="vertical"
+        adroid:layout_width="match_parent"
+        adroid:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        adroid:layout_width="match_parent"
+        adroid:layout_height="wrap_content"
+        adroid:layout_marginTop="20dp">
+        <include layout="@layout/about_table"/>
+
+     <TextView
+            adroid:layout_width="match_parent"
+            adroid:layout_height="wrap_content"
+            adroid:paddingBottom="6dp"
+            adroid:text="@string/bottom_about"
+            adroid:gravity="center"
+            adroid:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        adroid:layout_width="66dp"
+        adroid:layout_height="66dp"
+        adroid:src="@drawable/icon"
+        adroid:layout_below="@+id/toolbar"
+        adroid:layout_centerHorizontal="true"
+        adroid:layout_marginTop="10dp" />
+
+</RelativeLayout>
